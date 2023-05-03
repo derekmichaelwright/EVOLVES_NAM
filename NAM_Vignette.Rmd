@@ -1,0 +1,67 @@
+---
+title: "NAM"
+subtitle: "unpublished"
+author: "Derek Michael Wright <derek.wright@usask.ca>"
+date: "20-04-2023"
+output:
+  rmdformats::readthedown:
+    code_folding: show
+    css: custom.css
+    gallery: yes
+    highlight: tango
+    lightbox: yes
+    self_contained: no
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(eval = F, echo = T, message = F, warning = F, 
+                      comment = NA, out.width = "100%")
+```
+
+---
+
+# Introduction
+
+This vignette contains the `R` code and analysis done for the paper: 
+
+`r shiny::icon("newspaper")` [Derek M Wright, Sandesh Neupane & Kirstin E. Bett. **NAM**. (2023) unpublished.](https://github.com/derekmichaelwright/AGILE_LDP_Drone_Growth) 
+
+---
+
+This work done as part of the [EVOLVES](https://knowpulse.usask.ca/study/AGILE-Application-of-Genomic-Innovation-in-the-Lentil-Economy) and [P2IRC](https://p2irc.usask.ca/index.php) projects at the University of Saskatchewan.
+
+![](Additional/img_EVOLES.jpg)
+
+---
+
+# Data Preparation
+
+`r shiny::icon("save")` [Data_Manual/](https://github.com/derekmichaelwright/EVOLVES_NAM/tree/main/Data_Manual)
+
+```{r}
+library(tidyverse)
+library(ggbeeswarm)
+library(ggpubr)
+library(plotly)       # ggplotly()
+library(htmlwidgets)  # saveWidget()
+library(growthcurver) # SummarizeGrowth()
+library(FactoMineR)   # PCA()
+#library(ggrepel)      # geom_text_repel()
+theme_AGL <- theme_bw() + 
+  theme(strip.background   = element_rect(colour = "black", fill = NA, size = 0.5),
+        panel.background   = element_rect(colour = "black", fill = NA, size = 0.5),
+        panel.border       = element_rect(colour = "black", size = 0.5),
+        panel.grid         = element_line(color  = alpha("black", 0.1), size = 0.5),
+        panel.grid.minor.x = element_blank(), 
+        panel.grid.minor.y = element_blank())
+```
+
+## Load Data
+
+```{r}
+# Prep data
+```
+
+---
+
+&copy; Derek Michael Wright
